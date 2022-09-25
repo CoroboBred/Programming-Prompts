@@ -7,9 +7,12 @@ public class Main {
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] input = br.readLine().split(" ");
-        int tests = Integer.parseInt(input[0]);
-        for (int tc = 0; tc < tests; tc++) {
+        int a = Integer.parseInt(input[0]);
+        int b = Integer.parseInt(input[1]);
+        int c = Integer.parseInt(input[2]);
+        int d = Integer.parseInt(input[3]);
 
-        }
+        int ans = (a + b) * (c-d);
+        System.out.println("" + ans + "\n" + "Takahashi");
     }
 }

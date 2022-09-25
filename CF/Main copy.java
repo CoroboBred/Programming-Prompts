@@ -13,3 +13,17 @@ public class Main {
         }
     }
 }
+
+
+public static String recurse(currentStr String[], usedStr boolean[], strs String[]){
+    if(satisfiesCondition(currentStr)) return currentStr;
+    for(int i = 0; i < usedStr.length; i++){
+        if(usedStr[i])continue;
+        String nextStr = currentStr + strs[i];
+        usedStr[i] = true;
+        String ans = recurse(nextStr, usedStr, strs);
+        usedStr[i] = false;
+        if(ans != null) return ans;
+    }
+    return null;
+}
